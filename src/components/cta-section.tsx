@@ -17,7 +17,7 @@ export function CTASection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/neuro.ads.tj"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold text-lg hover:bg-primary/90 transition-all shadow-[0_0_30px_hsl(var(--primary)/0.4)]"
@@ -25,15 +25,23 @@ export function CTASection() {
               <Icon name="Instagram" size={24} />
               Instagram Direct
             </a>
-            <a
-              href="https://wa.me/992000000000"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl border border-primary text-primary font-bold text-lg hover:bg-primary hover:text-primary-foreground transition-all bg-transparent"
-            >
+            <div className="flex items-center justify-center gap-3 px-8 py-4 rounded-xl border border-primary/40 text-muted-foreground font-bold text-lg bg-transparent cursor-not-allowed select-none">
               <Icon name="MessageCircle" size={24} />
-              WhatsApp
-            </a>
+              Написать в WhatsApp
+              <span className="text-xs font-normal opacity-60 ml-1">— скоро</span>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-muted-foreground font-space-mono">
+            <span className="flex items-center gap-2">
+              <Icon name="Instagram" size={16} className="text-primary" />
+              @neuro.ads.tj
+            </span>
+            <span className="hidden sm:block text-border">|</span>
+            <span className="flex items-center gap-2">
+              <Icon name="MessageCircle" size={16} className="text-muted-foreground/50" />
+              WhatsApp — скоро будет добавлен
+            </span>
           </div>
         </div>
       </div>

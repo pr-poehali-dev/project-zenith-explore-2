@@ -15,21 +15,19 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/neuro.ads.tj"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-primary transition-colors duration-200"
               >
                 <Icon name="Instagram" size={20} />
               </a>
-              <a
-                href="https://wa.me/992000000000"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary transition-colors duration-200"
+              <span
+                className="text-gray-600 cursor-not-allowed"
+                title="WhatsApp — скоро будет добавлен"
               >
                 <Icon name="MessageCircle" size={20} />
-              </a>
+              </span>
               <a
                 href="https://t.me/"
                 target="_blank"
