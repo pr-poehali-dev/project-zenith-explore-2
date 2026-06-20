@@ -72,8 +72,8 @@ const Scene = () => {
         // Flow effect based on progress
         float flow = 1.0 - smoothstep(0.0, 0.02, abs(depth - uProgress));
 
-        // Red scanning overlay
-        vec3 mask = vec3(dot * flow * 10.0, 0.0, 0.0);
+        // Green/gold scanning overlay
+        vec3 mask = vec3(dot * flow * 4.0, dot * flow * 10.0, dot * flow * 5.0);
 
         // Combine effects
         vec3 final = baseColor.rgb + mask;
@@ -114,8 +114,8 @@ const Scene = () => {
 }
 
 export const Hero3DWebGL = () => {
-  const titleWords = "Synapse AI".split(" ")
-  const subtitle = "Нейроинтерфейсы нового поколения."
+  const titleWords = "AI-реклама для брендов".split(" ")
+  const subtitle = "Создаём современные Reels, Promo и Product Ads для бизнеса."
   const [visibleWords, setVisibleWords] = useState(0)
   const [subtitleVisible, setSubtitleVisible] = useState(false)
   const [delays, setDelays] = useState<number[]>([])
@@ -172,6 +172,23 @@ export const Hero3DWebGL = () => {
           >
             {subtitle}
           </div>
+        </div>
+        <div
+          className={`mt-8 flex flex-col sm:flex-row gap-4 pointer-events-auto normal-case ${subtitleVisible ? "fade-in-subtitle" : ""}`}
+          style={{ opacity: subtitleVisible ? undefined : 0 }}
+        >
+          <a
+            href="#contacts"
+            className="px-8 py-4 rounded-lg bg-primary text-primary-foreground font-geist font-bold text-base hover:bg-primary/90 transition-all shadow-[0_0_30px_hsl(var(--primary)/0.5)]"
+          >
+            Заказать рекламу
+          </a>
+          <a
+            href="#portfolio"
+            className="px-8 py-4 rounded-lg border border-primary/60 text-white font-geist font-bold text-base hover:bg-primary/10 transition-all"
+          >
+            Смотреть работы
+          </a>
         </div>
       </div>
 

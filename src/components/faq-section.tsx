@@ -3,34 +3,34 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export function FAQSection() {
   const faqs = [
     {
-      question: "Насколько безопасна процедура SynapseAI?",
+      question: "Сколько времени занимает создание ролика?",
       answer:
-        "Да, процедура выполняется прецизионным хирургическим роботом и прошла обширное тестирование. Все материалы биосовместимы и одобрены FDA для медицинского применения.",
+        "В среднем готовый ролик мы делаем за 2-4 дня. Для пакета «Бизнес» и срочных задач сроки можем сократить — обсудим при заказе.",
     },
     {
-      question: "Сколько длится операция?",
+      question: "Что мне нужно прислать для старта?",
       answer:
-        "Малоинвазивная процедура обычно занимает 2-3 часа и проводится под местной анестезией с седацией.",
+        "Достаточно фото вашего товара или короткого описания идеи. Остальное — сцены, свет, движение и монтаж — берём на себя.",
     },
     {
-      question: "Можно ли удалить устройство?",
+      question: "Нужна ли реальная съёмка товара?",
       answer:
-        "Да, SynapseAI разработан полностью обратимым. Устройство можно безопасно удалить при необходимости, хотя это требуется редко.",
+        "Нет. Мы создаём рекламу с помощью нейросетей, поэтому студия и съёмочная группа не нужны. Достаточно качественных фото товара.",
     },
     {
-      question: "Какие ощущения при использовании SynapseAI?",
+      question: "Можно ли вносить правки?",
       answer:
-        "Пользователи отмечают, что управление устройствами силой мысли ощущается естественно и интуитивно после короткого периода обучения. От самого импланта нет физических ощущений.",
+        "Да, количество правок зависит от тарифа. Мы согласовываем результат, пока вы не будете довольны финальным роликом.",
     },
     {
-      question: "Как долго работает батарея?",
+      question: "В каком формате я получу видео?",
       answer:
-        "Устройство заряжается беспроводным способом и работает полный день на одном заряде. Зарядка выполняется внешним устройством, размещаемым рядом с головой.",
+        "Отдаём готовый ролик в вертикальном формате для Reels, TikTok и Stories, а при необходимости — и в горизонтальном для YouTube или ТВ.",
     },
     {
-      question: "Кто может получить SynapseAI?",
+      question: "Как происходит оплата?",
       answer:
-        "В настоящее время мы фокусируемся на людях с тяжелым параличом. Соответствие определяется через комплексную медицинскую оценку.",
+        "Обсуждаем детали в Instagram Direct или WhatsApp, согласовываем формат и стоимость, после чего приступаем к работе.",
     },
   ]
 
@@ -40,15 +40,15 @@ export function FAQSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-orbitron">Частые вопросы</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto font-space-mono">
-            Ответы на популярные вопросы о технологии SynapseAI, безопасности и опыте пациентов.
+            Ответы на популярные вопросы о создании AI-рекламы, сроках и форматах.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-red-500/20 mb-4">
-                <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-red-400 font-orbitron px-6 py-4">
+              <AccordionItem key={index} value={`item-${index}`} className="border-primary/20 mb-4">
+                <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-primary font-orbitron px-6 py-4">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-300 leading-relaxed px-6 pb-4 font-space-mono">

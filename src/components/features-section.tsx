@@ -1,53 +1,54 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Icon from "@/components/ui/icon"
 
 const features = [
   {
-    title: "Адаптивная нейрообработка",
-    description: "Самооптимизирующиеся алгоритмы, которые обучаются на нейронных паттернах и улучшают интерпретацию сигналов.",
-    icon: "brain",
-    badge: "ИИ",
+    title: "AI Reels для соцсетей",
+    description: "Цепляющие вертикальные ролики для Instagram и TikTok, которые продают и собирают просмотры.",
+    icon: "Clapperboard",
+    badge: "Reels",
   },
   {
-    title: "Медицинская защита",
-    description: "Шифрование по стандартам FDA со сквозной защитой конфиденциальных нейронных данных.",
-    icon: "lock",
-    badge: "Сертификат",
+    title: "AI Product Video",
+    description: "Эффектные видео для товаров — одежда, напитки, гаджеты и аксессуары в кинематографичном качестве.",
+    icon: "Package",
+    badge: "Product",
   },
   {
-    title: "Интуитивное управление",
-    description: "Естественная трансляция мыслей в действия с откликом менее миллисекунды и точностью 99,7%.",
-    icon: "globe",
-    badge: "Точность",
+    title: "Promo-видео",
+    description: "Рекламные промо-ролики для запусков, акций и спецпредложений с динамичным монтажом.",
+    icon: "Megaphone",
+    badge: "Promo",
   },
   {
-    title: "Предиктивная калибровка",
-    description: "ML-модели, которые предугадывают намерения пользователя и оптимизируют нейронные пути.",
-    icon: "zap",
-    badge: "Умный",
+    title: "Реклама для магазинов",
+    description: "Видео-витрины для розницы и маркетплейсов, которые повышают продажи и узнаваемость бренда.",
+    icon: "Store",
+    badge: "Retail",
   },
   {
-    title: "Биометрическая интеграция",
-    description: "Бесшовная синхронизация с мониторингом жизненных показателей для контроля здоровья.",
-    icon: "link",
-    badge: "Связь",
+    title: "Реклама для кафе",
+    description: "Аппетитные ролики для кафе и ресторанов — еда, напитки и атмосфера, от которых текут слюнки.",
+    icon: "Coffee",
+    badge: "Food",
   },
   {
-    title: "Поддержка XR",
-    description: "Нативная совместимость с AR/VR-средами для терапевтических и рабочих приложений.",
-    icon: "target",
-    badge: "XR Ready",
+    title: "Реклама для авто",
+    description: "Премиальные авто-ролики с эффектными ракурсами и неоновой подачей для автосалонов и сервисов.",
+    icon: "Car",
+    badge: "Auto",
   },
 ]
 
 export function FeaturesSection() {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section id="services" className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Возможности нового поколения</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Наши услуги</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Почувствуйте будущее с технологиями, которые переопределяют возможное
+            Создаём рекламные видео нового поколения с помощью нейросетей
           </p>
         </div>
 
@@ -60,13 +61,8 @@ export function FeaturesSection() {
             >
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-3xl">
-                    {feature.icon === "brain" && "&#129504;"}
-                    {feature.icon === "lock" && "&#128274;"}
-                    {feature.icon === "globe" && "&#127760;"}
-                    {feature.icon === "zap" && "&#9889;"}
-                    {feature.icon === "link" && "&#128279;"}
-                    {feature.icon === "target" && "&#127919;"}
+                  <span className="text-primary">
+                    <Icon name={feature.icon} size={32} />
                   </span>
                   <Badge variant="secondary" className="bg-accent text-accent-foreground">
                     {feature.badge}
